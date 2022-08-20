@@ -57,7 +57,7 @@ router.post ("/login" , function (req,res){
           });
       });
 
-    //       //delete
+    //delete
 
       router.delete('/:id', (req, res) => {
         User.destroy({

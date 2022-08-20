@@ -5,7 +5,7 @@ class Comment extends Model {}
 
 Comment.init(
   {
-    text: {
+    comment_text: {
       type: DataTypes.STRING,
       allowNull: false,
     }
