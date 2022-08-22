@@ -1,4 +1,4 @@
-{{> post-info post}}
+{{!-- {{> post-info post}}
 
 {{#if loggedIn}}
 <form class="comment-form">
@@ -18,4 +18,29 @@
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>
+{{/if}} --}}
+
+<link rel="stylesheet" href="/public/stylesheets/style.css">
+
+<section class="comment-box">
+{{#if loggedIn}} 
+  <form class="comment-form">
+  {{> comments book.comments}}
+    <div>
+      <label for="Comment on this book!"></label>
+      <textarea name="comment-body" class="comment-body" rows="6" cols="85" spellcheck="true"></textarea>
+    </div>
+    <div class="btn-group">
+      <button type="submit" class= "btn-no-style">Comment</button>
+      <button type="button" class="upvote-btn">Like</button>
+      <button id = "home" class= "btn-no-style"> <a href="/dashboard">Back to Library</a></button>
+    </div>
+  </form>
+  {{/if}}
+</section> 
+
+
+{{#if loggedIn}}
+  <script src="/javascript/comment.js"></script>
+  <script src="/javascript/upvote.js"></script>
 {{/if}}

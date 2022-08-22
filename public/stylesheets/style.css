@@ -32,9 +32,6 @@
     border-radius: 5px;
   }
   
-  button:hover {
-    background-color: #3486eb;
-  }
   
   .post-list {
     margin: 0;
